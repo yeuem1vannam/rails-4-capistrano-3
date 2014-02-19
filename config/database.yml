@@ -30,7 +30,7 @@ staging:
   database: xxx_staging
   pool: 5
   username: root
-  password:
+  password: 123456
   socket: /var/run/mysqld/mysqld.sock
   timeout: 5000
 
@@ -41,6 +41,6 @@ production:
   database: xxx_production
   pool: 5
   username: root
-  password:
+  password: 123456
   socket: /var/run/mysqld/mysqld.sock
   timeout: 5000
