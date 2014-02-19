@@ -12,8 +12,8 @@ set :rails_env, "staging"
 set :deploy_env, "staging"
 
 # Directories
-set :deploy_to, "/usr/local/rails_apps/letscook"
-set :pid_file, "/tmp/unicorn_letscook_staging.pid"
+set :deploy_to, "/usr/local/rails_apps/rails4capistrano3"
+set :pid_file, "/tmp/unicorn_rails4capistrano3_staging.pid"
 server "localhost", user: "deploy", roles: %W{web app db}, primary: true
 
 # Extended Server Syntax
