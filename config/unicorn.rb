@@ -27,14 +27,14 @@ working_directory app_directory # available in 0.94.0+
 
 # listen on both a Unix domain socket and a TCP port,
 # we use a shorter backlog for quicker failover when busy
-listen "/tmp/unicorn_rails4capistrano3_#{rails_env}.sock", :backlog => 128
+listen "/tmp/unicorn_rails4capistrano3.sock", :backlog => 128
 #listen 5000, :tcp_nopush => true
 
 # nuke workers after 30 seconds instead of 60 seconds (the default)
 timeout 3000
 
 # feel free to point this anywhere accessible on the filesystem
-pid "/tmp/unicorn_rails4capistrano_#{rails_env}.pid"
+pid "/tmp/unicorn_rails4capistrano3.pid"
 
 # By default, the Unicorn logger will write to stderr.
 # Additionally, ome applications/frameworks log to stderr or stdout,
