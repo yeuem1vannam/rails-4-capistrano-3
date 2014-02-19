@@ -10,6 +10,7 @@
 
 set :rails_env, "staging"
 set :deploy_env, "staging"
+set :stage, :staging
 
 # Directories
 set :deploy_to, "/usr/local/rails_apps/rails4capistrano3"

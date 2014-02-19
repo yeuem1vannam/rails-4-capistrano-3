@@ -20,6 +20,7 @@ set :rvm_path, "/usr/local/rvm"
 set :user, "deploy"
 set :use_sudo, false
 set :default_run_options, :pty => true
+set :pid_file, "/tmp/unicorn_#{fetch(:application).downcase}_#{fetch(:stage)}.pid"
 
 # Default value for :format is :pretty
 # set :format, :pretty
@@ -49,8 +50,8 @@ namespace :deploy do
     on roles(:app), in: :sequence, wait: 5 do
       # Your restart mechanism here, for example:
       # execute :touch, release_path.join('tmp/restart.txt')
-      if File.exist? "#{pid_file}"
-        run "kill -USR2 `cat #{pid_file}`"
+      if File.exist? "#{fetch(:pid_file)}"
+        run "kill -USR2 `cat #{fetch(:pid_file)}`"
       end
     end
   end
