@@ -50,3 +50,6 @@ group :development do
   gem "capistrano-bundler"
   gem 'capistrano-rvm'
 end
+group :assets, :staging, :production do
+  gem "unicorn"
+end
