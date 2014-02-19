@@ -13,7 +13,7 @@ set :repo_url, 'git@github.com:yeuem1vannam/rails-4-capistrano-3.git'
 # Default value for :scm is :git
 set :scm, :git
 set :rvm_type, :system
-set :rvm_ruby_string, "2.1.0p0"
+set :rvm_ruby_string, "ruby-2.1.0@global"
 set :rvm_path, "/usr/local/rvm"
 
 # Deploy User
