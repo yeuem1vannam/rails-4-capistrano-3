@@ -8,25 +8,25 @@ gem "mysql2"
 gem "sqlite3"
 
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.0'
+gem 'sass-rails', '~> 4.0.1'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 
 # Use CoffeeScript for .js.coffee assets and views
-gem 'coffee-rails', '~> 4.0.0'
+gem 'coffee-rails', '~> 4.0.1'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library
-gem 'jquery-rails'
+gem 'jquery-rails', '>= 3.1.0'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks'
+gem 'turbolinks', '>= 2.2.1'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 1.2'
+gem 'jbuilder', '~> 1.5', '>= 1.5.3'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -45,10 +45,10 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 group :development do
-  gem "capistrano"
-  gem "capistrano-rails"
-  gem "capistrano-bundler"
-  gem 'capistrano-rvm'
+  gem "capistrano", ">= 3.1.0"
+  gem "capistrano-rails", ">= 1.1.1"
+  gem "capistrano-bundler", ">= 1.1.2"
+  gem 'capistrano-rvm', '>= 0.1.1'
 end
 group :assets, :staging, :production do
   gem "unicorn"
